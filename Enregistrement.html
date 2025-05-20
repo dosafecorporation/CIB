@@ -126,7 +126,7 @@
               <option value="BUKAVU">Bukavu</option>
               <option value="KINSHASA">Kinshasa</option>
               <option value="KISANGANI">Kisangani</option>
-              <option value="LUBUMBASHI">Lubummbashi</option>
+              <option value="LUBUMBASHI">Lubumbashi</option>
             </select>
           </div>
 
@@ -177,12 +177,151 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const siteOptions = {
-      "KINSHASA": [{ label: "UNIKIN", value: "UNIKIN" }, { label: "UPN", value: "UPN" }],
-      "LUBUMBASHI": [{ label: "UNILU", value: "UNILU" }],
-      "BUKAVU": [{ label: "ISP BUKAVU", value: "ISP BUKAVU" }],
-      "KISANGANI": [{ label: "UNIKIS", value: "UNIKIS" }],
-      "BANDUNDU": [{ label: "UNIBAND", value: "UNIBAND" }]
-    };
+  "BANDUNDU": [
+    {
+      "label": "UNIVERSITE DE BANDUNDU","value": "UNIVERSITE DE BANDUNDU"
+    }
+  ],
+  "BUKAVU": [
+    {"label": "INSTITUT SUPERIEUR DU DEVELOPPEMENT RURAL DE BUKAVU","value": "INSTITUT SUPERIEUR DU DEVELOPPEMENT RURAL DE BUKAVU"},{"label": "ISC BUKAVU","value": "ISC BUKAVU"},
+    {
+      "label": "ISEAV MUSHWESHWE",
+      "value": "ISEAV MUSHWESHWE"
+    },
+    {
+      "label": "ISP BUKAVU",
+      "value": "ISP BUKAVU"
+    },
+    {
+      "label": "UNIVERSITE DU CINQUANTENAIRE",
+      "value": "UNIVERSITE DU CINQUANTENAIRE"
+    }
+  ],
+  "KASAI": [
+    {
+      "label": "UNIVERSITE DE NOTRE DAME DU KASAI",
+      "value": "UNIVERSITE DE NOTRE DAME DU KASAI"
+    },
+    {
+      "label": "UNIVERSITE PEDAGOGIQUE DE KANANGA (ISDR Tshibashi, ISP Tshikula, ISES Kananga )",
+      "value": "UNIVERSITE PEDAGOGIQUE DE KANANGA (ISDR Tshibashi, ISP Tshikula, ISES Kananga )"
+    }
+  ],
+  "KASAI CENTRAL": [
+    {
+      "label": "ISP TSHIKAPA",
+      "value": "ISP TSHIKAPA"
+    },
+    {
+      "label": "ISTM TSHIKAPA",
+      "value": "ISTM TSHIKAPA"
+    },
+    {
+      "label": "UNIVERSITE DE KANANGA",
+      "value": "UNIVERSITE DE KANANGA"
+    }
+  ],
+  "KINSHASA": [
+    {
+      "label": "ABA",
+      "value": "ABA"
+    },
+    {
+      "label": "IFASIC",
+      "value": "IFASIC"
+    },
+    {
+      "label": "INA",
+      "value": "INA"
+    },
+    {
+      "label": "INBTP",
+      "value": "INBTP"
+    },
+    {
+      "label": "ISAU",
+      "value": "ISAU"
+    },
+    {
+      "label": "ISC",
+      "value": "ISC"
+    },
+    {
+      "label": "ISP",
+      "value": "ISP"
+    },
+    {
+      "label": "ISPT",
+      "value": "ISPT"
+    },
+    {
+      "label": "ISS",
+      "value": "ISS"
+    },
+    {
+      "label": "ISTA",
+      "value": "ISTA"
+    },
+    {
+      "label": "ISTM",
+      "value": "ISTM"
+    },
+    {
+      "label": "UNIKIN",
+      "value": "UNIKIN"
+    },
+    {
+      "label": "UPN",
+      "value": "UPN"
+    }
+  ],
+  "KISANGANI": [
+    {
+      "label": "UNIVERSITE DE KISANGANI",
+      "value": "UNIVERSITE DE KISANGANI"
+    }
+  ],
+  "KWANGO": [
+    {
+      "label": "Université du KWANGO",
+      "value": "Université du KWANGO"
+    }
+  ],
+  "LOMAMI": [
+    {
+      "label": "UNIVERSITE NOTRE DAME DE LOMAMI",
+      "value": "UNIVERSITE NOTRE DAME DE LOMAMI"
+    }
+  ],
+  "LUBUMBASHI": [
+    {
+      "label": "ISES-LUBUMBASHI",
+      "value": "ISES-LUBUMBASHI"
+    },
+    {
+      "label": "ISP LUBUMBASHI",
+      "value": "ISP LUBUMBASHI"
+    },
+    {
+      "label": "ISS-LUBUMBASHI",
+      "value": "ISS-LUBUMBASHI"
+    },
+    {
+      "label": "ISTM-LUBUMBASHI",
+      "value": "ISTM-LUBUMBASHI"
+    },
+    {
+      "label": "UNILU",
+      "value": "UNILU"
+    }
+  ],
+  "MBANDAKA": [
+    {
+      "label": "UNIVERSITE DE MBANDAKA",
+      "value": "UNIVERSITE DE MBANDAKA"
+    }
+  ]
+};
 
     const villeSelect = document.getElementById("localisation");
     const siteSelect = document.getElementById("site");
