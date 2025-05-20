@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Bootstrap Starter</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enregistrement Professeur - Responsive</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body { background-color: #f8f9fa; }
     .sidebar {
@@ -35,141 +35,159 @@
       max-width: 120px;
       margin-bottom: 1rem;
     }
-
     input.is-invalid, select.is-invalid {
       border-color: red;
     }
-    </style>
-
+  </style>
 </head>
 <body>
-  <div class="container-fluid"> 
-    <div class="row">
-      <nav class="col-md-2 d-none d-md-block sidebar">
-        <img src="Logo.png" alt="Logo" class="logo">
-        <h4>Cover Health Management</h4>
-        <a href="index.html">Dashboard</a>
-        <a href="Enregistrement.html" class="active">Enregistrement Individuels</a>
-        <a href="#">Paramètres</a>
-      
-      </nav>
 
-      <main class="col-md-10 ms-sm-auto px-md-4">
-        <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h2>Enregistrement Professeur</h2>
-        </div>
+<!-- Navigation mobile -->
+<nav class="navbar navbar-dark bg-dark d-md-none">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CHM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
 
-        <div class="mt-4">
-          <h4>Formulaire</h4>
-          <form>
-            <div class="mb-3"><label class="form-label">Nom</label><input type="text" class="form-control" placeholder="Nom" required></div>
-            <div class="mb-3"><label class="form-label">Post Nom</label><input type="text" class="form-control" placeholder="Post Nom" required></div>
-            <div class="mb-3"><label class="form-label">Prénom</label><input type="text" class="form-control" placeholder="Prénom" required></div>
-            <div class="mb-3"><label class="form-label">Sexe</label>
-              <select class="form-control" required>
-                <option value="">Sélectionner</option>
-                <option>Masculin</option>
-                <option>Féminin</option>
-              </select>
-            </div>
-            <div class="mb-3"><label class="form-label">Date de naissance</label><input type="date" class="form-control" required></div>
-            <div class="mb-3"><label class="form-label">Numéro de téléphone</label><input type="text" class="form-control" placeholder="Téléphone" required></div>
-            <div class="mb-3"><label class="form-label">Adresse mail</label><input type="email" class="form-control" placeholder="nom@exemple.com" required></div>
-            
-<div class="mb-3">
-  <label class="form-label">Localisation</label>
-  <select class="form-control" id="localisation" name="localisation" required>
-    <option value="">Sélectionner</option>
-    <option value="BANDUNDU">BANDUNDU</option>
-<option value="BUKAVU">BUKAVU</option>
-<option value="KASAI ">KASAI </option>
-<option value="KASAI CENTRAL ">KASAI CENTRAL </option>
-<option value="KINSHASA">KINSHASA</option>
-<option value="KISANGANI">KISANGANI</option>
-<option value="KWANGO">KWANGO</option>
-<option value="LOMAMI">LOMAMI</option>
-<option value="LUBUMBASHI">LUBUMBASHI</option>
-<option value="MBANDAKA">MBANDAKA</option>
-  </select>
+<!-- Menu offcanvas pour mobile -->
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="nav-link text-white" href="index.html">Dashboard</a>
+    <a class="nav-link text-white active" href="Enregistrement.html">Enregistrement</a>
+    <a class="nav-link text-white" href="#">Paramètres</a>
+  </div>
 </div>
 
-<div class="mb-3">
-  <label class="form-label">Site universitaire</label>
-  <select class="form-control" id="site" name="site" required>
-    <option value="">Sélectionner</option>
-  </select>
-</div>
-  </div>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar desktop -->
+    <nav class="col-md-2 d-none d-md-block sidebar">
+      <img src="Logo.png" alt="Logo" class="logo">
+      <h4>Cover Health Management</h4>
+      <a href="index.html">Dashboard</a>
+      <a href="Enregistrement.html" class="active">Enregistrement Individuels</a>
+      <a href="#">Paramètres</a>
+    </nav>
 
-            <h5>Documents à charger</h5>
-            <div class="mb-3"><label class="form-label">Carte d'identité | Carte de Service</label><input type="file" class="form-control" required></div>
-            <div class="mb-3"><label class="form-label">Arrêté ministériel</label><input type="file" class="form-control" required></div>
-            <div class="mb-3"><label class="form-label">Charge horaire</label><input type="file" class="form-control" required></div>
-            <div class="mb-3"><label class="form-label">Photo</label><input type="file" class="form-control" required></div>
+    <main class="col-md-10 ms-sm-auto px-md-4">
+      <div class="pt-3 pb-2 mb-3 border-bottom">
+        <h2>Enregistrement Professeur</h2>
+      </div>
 
-            <h5>Informations de l'épouse</h5>
-            <div class="mb-3"><label class="form-label">Nom</label><input type="text" class="form-control" placeholder="Nom de l'épouse" required></div>
-            <div class="mb-3"><label class="form-label">Post Nom</label><input type="text" class="form-control" placeholder="Post Nom de l'épouse" required></div>
-            <div class="mb-3"><label class="form-label">Prénom</label><input type="text" class="form-control" placeholder="Prénom de l'épouse" required></div>
-            <div class="mb-3"><label class="form-label">Sexe</label>
-              <select class="form-control" required>
-                <option value="">Sélectionner</option>
-                <option>Féminin</option>
-              </select>
-            </div>
-            <div class="mb-3"><label class="form-label">Numéro de téléphone</label><input type="text" class="form-control" placeholder="Téléphone de l'épouse" required></div>
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-3"><label class="form-label">Nom</label><input type="text" class="form-control" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Post Nom</label><input type="text" class="form-control" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Prénom</label><input type="text" class="form-control" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Sexe</label>
+            <select class="form-control" required>
+              <option value="">Sélectionner</option>
+              <option>Masculin</option>
+              <option>Féminin</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3"><label class="form-label">Date de naissance</label><input type="date" class="form-control" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Téléphone</label><input type="text" class="form-control" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Adresse mail</label><input type="email" class="form-control" required></div>
 
-            <button type="submit" class="btn btn-primary">Soumettre</button>
-          </form>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Localisation</label>
+            <select class="form-control" id="localisation" required>
+              <option value="">Sélectionner</option>
+              <option value="KINSHASA">KINSHASA</option>
+              <option value="LUBUMBASHI">LUBUMBASHI</option>
+              <option value="BUKAVU">BUKAVU</option>
+              <option value="KISANGANI">KISANGANI</option>
+              <option value="BANDUNDU">BANDUNDU</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Site universitaire</label>
+            <select class="form-control" id="site" required>
+              <option value="">Sélectionner</option>
+            </select>
+          </div>
         </div>
-      </main>
-    </div>
+
+        <h5>Documents à charger</h5>
+        <div class="mb-3"><label class="form-label">Carte d'identité</label><input type="file" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Arrêté ministériel</label><input type="file" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Charge horaire</label><input type="file" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Photo</label><input type="file" class="form-control" required></div>
+
+        <h5>Informations de l'épouse</h5>
+        <div class="row">
+          <div class="col-md-4 mb-3"><label class="form-label">Nom</label><input type="text" class="form-control" required></div>
+          <div class="col-md-4 mb-3"><label class="form-label">Post Nom</label><input type="text" class="form-control" required></div>
+          <div class="col-md-4 mb-3"><label class="form-label">Prénom</label><input type="text" class="form-control" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Sexe</label>
+            <select class="form-control" required>
+              <option value="">Sélectionner</option>
+              <option>Féminin</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3"><label class="form-label">Téléphone</label><input type="text" class="form-control" required></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Soumettre</button>
+      </form>
+    </main>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const fields = this.querySelectorAll("input, select");
+    let valid = true;
 
-  <script>
-    document.querySelector("form").addEventListener("submit", function(e) {
-      const fields = this.querySelectorAll("input, select");
-      let valid = true;
-
-      fields.forEach(field => {
-        if (!field.checkValidity()) {
-          field.classList.add("is-invalid");
-          valid = false;
-        } else {
-          field.classList.remove("is-invalid");
-        }
-      });
-
-      if (!valid) {
-        e.preventDefault();
+    fields.forEach(field => {
+      if (!field.checkValidity()) {
+        field.classList.add("is-invalid");
+        valid = false;
+      } else {
+        field.classList.remove("is-invalid");
       }
     });
-  </script>
-<script>
-const siteOptions = {"BANDUNDU": [{"label": "UNIVERSITE DE BANDUNDU", "value": "UNIVERSITE DE BANDUNDU"}], "BUKAVU": [{"label": "INSTITUT SUPERIEUR DU DEVELOPPEMENT RURAL DE BUKAVU", "value": "INSTITUT SUPERIEUR DU DEVELOPPEMENT RURAL DE BUKAVU"}, {"label": "ISC BUKAVU", "value": "ISC BUKAVU"}, {"label": "ISEAV MUSHWESHWE", "value": "ISEAV MUSHWESHWE"}, {"label": "ISP BUKAVU", "value": "ISP BUKAVU"}, {"label": "UNIVERSITE DU CINQUANTENAIRE", "value": "UNIVERSITE DU CINQUANTENAIRE"}], "KASAI ": [{"label": "UNIVERSITE DE NOTRE DAME DU KASAI", "value": "UNIVERSITE DE NOTRE DAME DU KASAI"}, {"label": "UNIVERSITE PEDAGOGIQUE DE KANANGA (ISDR Tshibashi, ISP Tshikula, ISES Kananga )", "value": "UNIVERSITE PEDAGOGIQUE DE KANANGA (ISDR Tshibashi, ISP Tshikula, ISES Kananga )"}], "KASAI CENTRAL ": [{"label": "ISP TSHIKAPA", "value": "ISP TSHIKAPA"}, {"label": "ISTM TSHIKAPA", "value": "ISTM TSHIKAPA"}, {"label": "UNIVERSITE DE KANANGA", "value": "UNIVERSITE DE KANANGA"}], "KINSHASA": [{"label": "ABA", "value": "ABA"}, {"label": "IFASIC", "value": "IFASIC"}, {"label": "INA", "value": "INA"}, {"label": "INBTP", "value": "INBTP"}, {"label": "ISAU", "value": "ISAU"}, {"label": "ISC", "value": "ISC"}, {"label": "ISP", "value": "ISP"}, {"label": "ISPT", "value": "ISPT"}, {"label": "ISS", "value": "ISS"}, {"label": "ISTA", "value": "ISTA"}, {"label": "ISTM", "value": "ISTM"}, {"label": "UNIKIN", "value": "UNIKIN"}, {"label": "UPN", "value": "UPN"}], "KISANGANI": [{"label": "UNIVERSITE DE KISANGANI", "value": "UNIVERSITE DE KISANGANI"}], "KWANGO": [{"label": "Université du KWANGO", "value": "Université du KWANGO"}], "LOMAMI": [{"label": "UNIVERSITE NOTRE DAME DE LOMAMI", "value": "UNIVERSITE NOTRE DAME DE LOMAMI"}], "LUBUMBASHI": [{"label": "ISES-LUBUMBASHI", "value": "ISES-LUBUMBASHI"}, {"label": "ISP LUBUMBASHI", "value": "ISP LUBUMBASHI"}, {"label": "ISS-LUBUMBASHI", "value": "ISS-LUBUMBASHI"}, {"label": "ISTM-LUBUMBASHI", "value": "ISTM-LUBUMBASHI"}, {"label": "UNILU", "value": "UNILU"}], "MBANDAKA": [{"label": "UNIVERSITE DE MBANDAKA", "value": "UNIVERSITE DE MBANDAKA"}]};
 
+    if (!valid) {
+      e.preventDefault();
+    }
+  });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const villeSelect = document.getElementById("localisation");
-  const siteSelect = document.getElementById("site");
+  const siteOptions = {
+    "KINSHASA": [{"label": "UNIKIN", "value": "UNIKIN"}, {"label": "UPN", "value": "UPN"}],
+    "LUBUMBASHI": [{"label": "UNILU", "value": "UNILU"}],
+    "BUKAVU": [{"label": "ISP BUKAVU", "value": "ISP BUKAVU"}],
+    "KISANGANI": [{"label": "UNIKIS", "value": "UNIKIS"}],
+    "BANDUNDU": [{"label": "UNIBAND", "value": "UNIBAND"}]
+  };
 
-  villeSelect.addEventListener("change", function () {
-    const selectedVille = this.value;
-    const sites = siteOptions[selectedVille] || [];
+  document.addEventListener("DOMContentLoaded", function () {
+    const villeSelect = document.getElementById("localisation");
+    const siteSelect = document.getElementById("site");
 
-    siteSelect.innerHTML = '<option value="">Sélectionner</option>';
-    sites.forEach(site => {
-      const option = document.createElement("option");
-      option.value = site.value;
-      option.textContent = site.label;
-      siteSelect.appendChild(option);
+    villeSelect.addEventListener("change", function () {
+      const selectedVille = this.value;
+      const sites = siteOptions[selectedVille] || [];
+
+      siteSelect.innerHTML = '<option value="">Sélectionner</option>';
+      sites.forEach(site => {
+        const option = document.createElement("option");
+        option.value = site.value;
+        option.textContent = site.label;
+        siteSelect.appendChild(option);
+      });
     });
   });
-});
 </script>
-
 </body>
-
 </html>
