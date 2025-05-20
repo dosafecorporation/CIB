@@ -45,7 +45,7 @@
 <!-- Navigation mobile -->
 <nav class="navbar navbar-dark bg-dark d-md-none">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">CHM</a>
+    <a class="navbar-brand" href="#"><img src="Logo.png" alt="Logo" class="logo img-fluid"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,7 +69,7 @@
   <div class="row">
     <!-- Sidebar desktop -->
     <nav class="col-md-2 d-none d-md-block sidebar">
-      <img src="Logo.png" alt="Logo" class="logo">
+      <img src="Logo.png" alt="Logo" class="logo img-fluid">
       <h4>Cover Health Management</h4>
       <a href="index.html">Dashboard</a>
       <a href="Enregistrement.html" class="active">Enregistrement Individuels</a>
@@ -81,7 +81,11 @@
         <h2>Enregistrement Professeur</h2>
       </div>
 
-      <form>
+      
+<form>
+  <fieldset class="border p-3 mb-4">
+    <legend class="w-auto px-2">Identité du professeur</legend>
+
         <div class="row">
           <div class="col-md-6 mb-3"><label class="form-label">Nom</label><input type="text" class="form-control" required></div>
           <div class="col-md-6 mb-3"><label class="form-label">Post Nom</label><input type="text" class="form-control" required></div>
@@ -101,11 +105,11 @@
             <label class="form-label">Localisation</label>
             <select class="form-control" id="localisation" required>
               <option value="">Sélectionner</option>
-              <option value="KINSHASA">Kinshasa</option>
-              <option value="LUBUMBASHI">Lubumbashi</option>
-              <option value="BUKAVU">Bukavu</option>
-              <option value="KISANGANI">Kisangani</option>
-              <option value="BANDUNDU">Bandundu</option>
+              <option value="KINSHASA">KINSHASA</option>
+              <option value="LUBUMBASHI">LUBUMBASHI</option>
+              <option value="BUKAVU">BUKAVU</option>
+              <option value="KISANGANI">KISANGANI</option>
+              <option value="BANDUNDU">BANDUNDU</option>
             </select>
           </div>
 
@@ -117,13 +121,21 @@
           </div>
         </div>
 
-        <h5>Documents à charger</h5>
+        
+  </fieldset>
+  <fieldset class="border p-3 mb-4">
+    <legend class="w-auto px-2">Documents à charger</legend>
+
         <div class="mb-3"><label class="form-label">Carte d'identité</label><input type="file" class="form-control" required></div>
         <div class="mb-3"><label class="form-label">Arrêté ministériel</label><input type="file" class="form-control" required></div>
         <div class="mb-3"><label class="form-label">Charge horaire</label><input type="file" class="form-control" required></div>
         <div class="mb-3"><label class="form-label">Photo</label><input type="file" class="form-control" required></div>
 
-        <h5>Informations de l'épouse</h5>
+        
+  </fieldset>
+  <fieldset class="border p-3 mb-4">
+    <legend class="w-auto px-2">Identité de l'épouse</legend>
+
         <div class="row">
           <div class="col-md-4 mb-3"><label class="form-label">Nom</label><input type="text" class="form-control" required></div>
           <div class="col-md-4 mb-3"><label class="form-label">Post Nom</label><input type="text" class="form-control" required></div>
@@ -137,7 +149,7 @@
           <div class="col-md-6 mb-3"><label class="form-label">Téléphone</label><input type="text" class="form-control" required></div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Soumettre</button>
+        </fieldset><div class="text-end"><button type="submit" class="btn btn-primary">Soumettre</button></div>
       </form>
     </main>
   </div>
@@ -164,11 +176,11 @@
   });
 
   const siteOptions = {
-    "Kinshasa": [{"label": "UNIKIN", "value": "UNIKIN"}, {"label": "UPN", "value": "UPN"}],
-    "Lubumbashi": [{"label": "UNILU", "value": "UNILU"}],
-    "Bukavu": [{"label": "ISP BUKAVU", "value": "ISP BUKAVU"}],
-    "Kisangani": [{"label": "UNIKIS", "value": "UNIKIS"}],
-    "Bandundu": [{"label": "UNIBAND", "value": "UNIBAND"}]
+    "KINSHASA": [{"label": "UNIKIN", "value": "UNIKIN"}, {"label": "UPN", "value": "UPN"}],
+    "LUBUMBASHI": [{"label": "UNILU", "value": "UNILU"}],
+    "BUKAVU": [{"label": "ISP BUKAVU", "value": "ISP BUKAVU"}],
+    "KISANGANI": [{"label": "UNIKIS", "value": "UNIKIS"}],
+    "BANDUNDU": [{"label": "UNIBAND", "value": "UNIBAND"}]
   };
 
   document.addEventListener("DOMContentLoaded", function () {
